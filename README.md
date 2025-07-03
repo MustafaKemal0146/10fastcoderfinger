@@ -9,7 +9,7 @@ A modern, feature-rich typing practice application specifically designed for pro
 ## ✨ Features
 
 ### 🎯 Core Typing Practice
-- **Real Code Snippets**: Practice with actual code in C#, Python, JavaScript, and more
+- **Real Code Snippets**: Practice with actual code in C#, Python, and more
 - **Multiple Difficulty Levels**: Easy, Medium, and Hard challenges
 - **Live Statistics**: Real-time WPM, accuracy, and error tracking
 - **Smart Error Detection**: Visual feedback for mistakes with position tracking
