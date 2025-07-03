@@ -68,8 +68,8 @@ A modern, feature-rich typing practice application specifically designed for pro
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/tenfastcoderfinger.git
-   cd tenfastcoderfinger
+   git clone https://github.com/mustafakemal0146/10fastcoderfinger.git
+   cd 10fastcoderfinger
    ```
 
 2. **Install dependencies**
@@ -228,10 +228,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Documentation**: [Wiki](https://github.com/yourusername/tenfastcoderfinger/wiki)
-- **Issues**: [GitHub Issues](https://github.com/yourusername/tenfastcoderfinger/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/yourusername/tenfastcoderfinger/discussions)
-- **Email**: support@tenfastcoderfinger.com
+- **Documentation**: [Wiki](https://github.com/mustafakemal0146/tenfastcoderfinger/wiki)
+- **Issues**: [GitHub Issues](https://github.com/mustafakemal0146/tenfastcoderfinger/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/mustafakemal0146/tenfastcoderfinger/discussions)
+- **Email**: ismustafakemal0146@gmail.com
 
 ## 🗺️ Roadmap
 
@@ -257,6 +257,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with ❤️ for the coding community**
 
-[Website](https://tenfastcoderfinger.com) • [Demo](https://demo.tenfastcoderfinger.com) • [Documentation](https://docs.tenfastcoderfinger.com)
+• [Demo](https://astounding-manatee-83545f.netlify.app/)  •
 
 </div>
