@@ -58,8 +58,11 @@ export const CodeDisplay: React.FC<CodeDisplayProps> = ({
         </div>
       </div>
       
-      <div className="bg-gray-950/50 rounded-lg p-4 border border-gray-800">
-        <pre className="text-sm leading-relaxed font-mono whitespace-pre-wrap break-words">
+      <div className="bg-gray-950/50 rounded-lg p-4 border border-gray-800"
+        style={{ userSelect: 'none' }}
+        onContextMenu={e => e.preventDefault()}
+      >
+        <pre className="text-sm leading-relaxed font-mono whitespace-pre-wrap break-words select-none">
           {code.split('').map((char, index) => renderCharacter(char, index))}
         </pre>
       </div>

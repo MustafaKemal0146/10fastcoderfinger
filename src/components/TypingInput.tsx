@@ -58,31 +58,34 @@ export const TypingInput: React.FC<TypingInputProps> = ({
       transition={{ delay: 0.2 }}
       className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700"
     >
-      <label className="block text-sm font-medium text-gray-300 mb-3">
-        Your Code Input
-      </label>
-      
-      <textarea
-        ref={textareaRef}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        disabled={disabled}
-        placeholder={getPlaceholder()}
-        className={`w-full h-40 bg-gray-900/50 text-white placeholder-gray-500 rounded-lg p-4 font-mono text-sm leading-relaxed resize-none transition-all duration-200 ${getBorderColor()}`}
-        spellCheck={false}
-        autoComplete="off"
-        autoCorrect="off"
-        autoCapitalize="off"
-      />
-      
-      <div className="mt-3 flex items-center justify-between text-xs text-gray-400">
-        <span>
-          {state === 'idle' && 'Ready to start'}
-          {state === 'typing' && 'Keep typing...'}
-          {state === 'completed' && '🎉 Challenge completed!'}
-          {state === 'paused' && 'Paused'}
-        </span>
+      <div className="flex items-center justify-between">
+        <label className="block text-sm font-medium text-gray-300 mb-3">
+          Your Code Input
+        </label>
         <span>{value.length} characters</span>
+      </div>
+      
+      <div className="flex items-center">
+        <textarea
+          ref={textareaRef}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          disabled={disabled}
+          placeholder={getPlaceholder()}
+          className={`w-full h-40 bg-gray-900/50 text-white placeholder-gray-500 rounded-lg p-4 font-mono text-sm leading-relaxed resize-none transition-all duration-200 ${getBorderColor()}`}
+          spellCheck={false}
+          autoComplete="off"
+          autoCorrect="off"
+          autoCapitalize="off"
+        />
+        <div className="ml-4">
+          <span>
+            {state === 'idle' && 'Ready to start'}
+            {state === 'typing' && 'Keep typing...'}
+            {state === 'completed' && '🎉 Challenge completed!'}
+            {state === 'paused' && 'Paused'}
+          </span>
+        </div>
       </div>
     </motion.div>
   );

@@ -3,7 +3,6 @@ import { TypingStats, TypingState, CodeSnippet, Achievement } from '../types';
 import { useAuth } from './AuthContext';
 import { saveTypingSession } from '../lib/supabase';
 import { checkAchievements } from '../utils/achievements';
-import { playSound } from '../utils/sounds';
 import toast from 'react-hot-toast';
 
 interface GameState {
@@ -218,7 +217,6 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       type: 'UPDATE_STATS',
       payload: { startTime },
     });
-    playSound('keystroke');
   };
 
   const resetGame = () => {
@@ -235,7 +233,6 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const completeGame = async () => {
     dispatch({ type: 'COMPLETE_GAME' });
-    playSound('completion');
 
     if (user && gameState.currentSnippet) {
       // Save session to database
@@ -260,7 +257,6 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const newAchievements = await checkAchievements(user.id, gameState.stats);
       newAchievements.forEach(achievement => {
         dispatch({ type: 'ADD_ACHIEVEMENT', payload: achievement });
-        playSound('achievement');
         toast.success(`Achievement unlocked: ${achievement.name}!`);
       });
 
@@ -289,7 +285,6 @@ export const GameProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
       if (newLevel > gameState.level) {
         toast.success(`Level up! You're now level ${newLevel}!`);
-        playSound('achievement');
       }
     }
   };
